@@ -57,8 +57,9 @@ const substitutionModule = (function () {
 
       // use the encodekey object we just made to encode the input , leave spaces
       let message = "";
-      for(let j = 0; j < input.length; j++){
-        const inputChar = input[j];
+      let lowerCaseInput = input.toLowerCase();
+      for(let j = 0; j < lowerCaseInput.length; j++){
+        const inputChar = lowerCaseInput[j];
         if(inputChar === " "){
           message += inputChar;
         } else {
@@ -83,8 +84,9 @@ const substitutionModule = (function () {
 
       //use the decode key object to decode the input
       let message = "";
-      for(let i = 0; i < input.length; i++){
-        const inputChar = input[i];
+      let lowerCaseInput = input.toLowerCase();
+      for(let i = 0; i < lowerCaseInput.length; i++){
+        const inputChar = lowerCaseInput[i];
         if(inputChar === " "){
           message += inputChar;
         } else {
